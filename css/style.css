@@ -24,7 +24,7 @@ time, mark, audio, video {
 }
 @keyframes txt-hover {
      from{font-size: 60px;}
-     to{font-size: 70px;}
+     to{font-size: 64px;}
 }
 @keyframes fading {
     from{opacity: 0} to{opacity: 1}
@@ -154,26 +154,32 @@ h2 {
 .section-link:hover{
      animation-name: txt-hover;
      animation-duration: 1s;
-     font-size: 70px;
+     font-size: 64px;
+}
+#home-btn{
+     background-image: url(../img/home.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 70px 70px;
+     height: 70px; 
 }
 #pic-container{
      position: relative;
      top: 50%;
      transform: perspective(1px) translateY(-50%);
      background-color: white;
-     width: 40vw;
-     height: 90vh;
+     width: 35vw;
+     height: 85vh;
      margin: 0 auto;
      background-image: url(../img/0.jpg);
      background-repeat: no-repeat;
      background-position: center;
      background-size: 100%; 
-     animation-name: img-hover;
-     animation-duration: 3s;
      z-index: 100;
+     border: 1px solid red;
 }
-#link1:hover ~ #pic-container {
-     background-image: url(../img/1.jpg);
+.pic-anim{
+     animation: img-hover 3s;
 }
 @media only screen and (max-width: 768px) {
      #pictures{
@@ -191,5 +197,10 @@ h2 {
           font-size: 30px;
           margin-left: 5vw;
           margin-right: 5vw;
+     }
+     .section-link{
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-size: 55px;
      }
 }
