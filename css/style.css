@@ -175,3 +175,21 @@ h2 {
 #link1:hover ~ #pic-container {
      background-image: url(../img/1.jpg);
 }
+@media only screen and (max-width: 768px) {
+     #pictures{
+          display: none;
+     }
+     #links{
+          width: 100%;
+     }
+     h1{
+          font-size: 48px;
+          margin-left: 5vw;
+          margin-right: 5vw;
+     }
+     h2{
+          font-size: 30px;
+          margin-left: 5vw;
+          margin-right: 5vw;
+     }
+}
