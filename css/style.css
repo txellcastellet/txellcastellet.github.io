@@ -63,9 +63,10 @@ body{
 .change .bar-4 {
      opacity: 0;
 }
-header {
+#section-0 {
      background-color: #DEB887;
      width: 100%;
+     z-index: 10;
 }
 h1 {
      position: relative; 
@@ -150,6 +151,7 @@ h2 {
      align-items: center;
      padding: 20px;
      text-transform: uppercase;
+     cursor: pointer;
 }
 .section-link:hover{
      animation-name: txt-hover;
@@ -181,6 +183,17 @@ h2 {
 .pic-anim{
      animation: img-hover 3s;
 }
+.menu-anim{
+     animation: fading 1s;
+     animation-direction: reverse;
+     background-color: red;
+}
+#section-1{display: none;}
+#section-2{display: none;}
+#section-3{display: none;}
+#section-4{display: none;}
+#section-5{display: none;}
+
 @media only screen and (max-width: 768px) {
      #pictures{
           display: none;
