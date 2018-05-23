@@ -15,83 +15,84 @@
 		<meta name="theme-color" content="#e2c5f4">
 	</head>
 	<body>
-	<header id="section-0">
-		<div id="inici">
-			<div class="central">
-				<h1><p>Meritxell Castellet Sánchez</p></h1>
-				<br>
-				<h2><p>Benvolguts i benvolgudes al meu portfoli personal</p></h2>
+		<nav>
+			<div id="menu" onclick="menuopening(this)">
+				<span class="bar-1"></span>
+				<span class="bar-2"></span>
+				<span class="bar-3"></span>
+				<span class="bar-4"></span>
 			</div>
-		</div>
-	</header>
-	<nav>
-		<div id="menu" onclick="menuopening(this)">
-			<span class="bar-1"></span>
-			<span class="bar-2"></span>
-			<span class="bar-3"></span>
-			<span class="bar-4"></span>
-		</div>
-		<div id="overlay">
-			<div id="links">
-				<div id="inner-links">
-					<a class="section-link" onmouseover="photoswap(0)" onclick="actitab(0)" id="home-btn"></a>
-					<a class="section-link" onmouseover="photoswap(1)" onclick="actitab(1)">Statement</a>
-					<a class="section-link" onmouseover="photoswap(2)" onclick="actitab(2)">Projectes</a>
-					<a class="section-link" onmouseover="photoswap(3)" onclick="actitab(3)">Imatges</a>
-					<a class="section-link" onmouseover="photoswap(4)" onclick="actitab(4)">So</a>
-					<a class="section-link" onmouseover="photoswap(5)" onclick="actitab(5)">Extres</a>
+			<div id="overlay">
+				<div id="links">
+					<div id="inner-links">
+						<a class="section-link" onmouseover="photoswap(0)" onclick="actitab(0)" id="home-btn"></a>
+						<a class="section-link" onmouseover="photoswap(1)" onclick="actitab(1)">Statement</a>
+						<a class="section-link" onmouseover="photoswap(2)" onclick="actitab(2)">Projectes</a>
+						<a class="section-link" onmouseover="photoswap(3)" onclick="actitab(3)">Imatges</a>
+						<a class="section-link" onmouseover="photoswap(4)" onclick="actitab(4)">So</a>
+						<a class="section-link" onmouseover="photoswap(5)" onclick="actitab(5)">Extres</a>
+					</div>
+				</div>
+				<div id="pictures">
+					<div id="pic-container"></div>
 				</div>
 			</div>
-			<div id="pictures">
-				<div id="pic-container"></div>
+		</nav>
+		<header id="section-0">
+			<div id="inici">
+				<div class="central">
+					<h1><p>Meritxell Castellet Sánchez</p></h1>
+					<br>
+					<h2><p>Benvolguts i benvolgudes al meu portfoli personal</p></h2>
+				</div>
 			</div>
-		</div>
-	</nav>
-	<main>
-		<div id="section-1">
-			<p>Part 1</p>
-		</div>
-		<div id="section-2">
-			<p>Part 2</p>
-		</div>
-		<div id="section-3">
-			<p>Part 3</p>
-		</div>
-		<div id="section-4">
-			<p>Part 4</p>
-		</div>
-		<div id="section-5">
-			<p>Part 5</p>
-		</div>
-	</main>
-	<script type="text/javascript">
-		function menuopening(x) {
-				x.classList.toggle("change");
-				document.getElementById('overlay').classList.toggle('visible');
-		}
-	</script>
-	<script type="text/javascript">
-			function photoswap(x) {
-				document.getElementById('pic-container').style.backgroundImage = "url('img/" + x + ".jpg')";
-				document.getElementById('pic-container').classList.remove('pic-anim');
-				document.getElementById('pic-container').style.backgoundSize = "130%";
-				setTimeout("document.getElementById('pic-container').classList.add('pic-anim')", 1);
+		</header>
+		<main>
+			<div id="section-head"><p>Txell Castellet</p></div>
+			<section id="section-1">
+				<p>Part 1</p>
+			</section>
+			<section id="section-2">
+				<p>Part 2</p>
+			</section>
+			<section id="section-3">
+				<p>Part 3</p>
+			</section>
+			<section id="section-4">
+				<p>Part 4</p>
+			</section>
+			<section id="section-5">
+				<p>Part 5</p>
+			</section>
+		</main>
+		<script type="text/javascript">
+			function menuopening(x) {
+					x.classList.toggle("change");
+					document.getElementById('overlay').classList.toggle('visible');
 			}
-	</script>
-	<script type="text/javascript">
-			function actitab(x) {
-				document.getElementById('section-0').style.display="none";
-				document.getElementById('section-1').style.display="none";
-				document.getElementById('section-2').style.display="none";
-				document.getElementById('section-3').style.display="none";
-				document.getElementById('section-4').style.display="none";
-				document.getElementById('section-5').style.display="none";
+		</script>
+		<script type="text/javascript">
+				function photoswap(x) {
+					document.getElementById('pic-container').style.backgroundImage = "url('img/" + x + ".jpg')";
+					document.getElementById('pic-container').classList.remove('pic-anim');
+					document.getElementById('pic-container').style.backgoundSize = "130%";
+					setTimeout("document.getElementById('pic-container').classList.add('pic-anim')", 1);
+				}
+		</script>
+		<script type="text/javascript">
+				function actitab(x) {
+					document.getElementById('section-0').style.display="none";
+					document.getElementById('section-1').style.display="none";
+					document.getElementById('section-2').style.display="none";
+					document.getElementById('section-3').style.display="none";
+					document.getElementById('section-4').style.display="none";
+					document.getElementById('section-5').style.display="none";
 
-				document.getElementById('menu').classList.toggle("change");
-				document.getElementById('overlay').classList.toggle('visible');
+					document.getElementById('menu').classList.toggle("change");
+					document.getElementById('overlay').classList.toggle('visible');
 
-				document.getElementById('section-' + x).style.display="block";
-			}
-	</script>
+					document.getElementById('section-' + x).style.display="block";
+				}
+		</script>
 	</body>
 </html>
