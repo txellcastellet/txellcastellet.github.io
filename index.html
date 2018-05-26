@@ -14,7 +14,7 @@
 		<meta name="msapplication-TileColor" content="#ff0000">
 		<meta name="theme-color" content="#e2c5f4">
 	</head>
-	<body>
+	<body onload="tabrem()">
 		<nav>
 			<div id="menu" onclick="menuopening(this)">
 				<span class="bar-1"></span>
@@ -25,12 +25,12 @@
 			<div id="overlay">
 				<div id="links">
 					<div id="inner-links">
-						<a class="section-link" onmouseover="photoswap(0)" onclick="actitab(0)" id="home-btn"></a>
-						<a class="section-link" onmouseover="photoswap(1)" onclick="actitab(1)">Statement</a>
-						<a class="section-link" onmouseover="photoswap(2)" onclick="actitab(2)">Projectes</a>
-						<a class="section-link" onmouseover="photoswap(3)" onclick="actitab(3)">Imatges</a>
-						<a class="section-link" onmouseover="photoswap(4)" onclick="actitab(4)">So</a>
-						<a class="section-link" onmouseover="photoswap(5)" onclick="actitab(5)">Extres</a>
+						<a class="section-link" onmouseover="photoswap(0)" onclick="actitab(0)" id="home-btn" href=""></a>
+						<a class="section-link" onmouseover="photoswap(1)" onclick="actitab(1)" href="#1">Statement</a>
+						<a class="section-link" onmouseover="photoswap(2)" onclick="actitab(2)" href="#2">Projectes</a>
+						<a class="section-link" onmouseover="photoswap(3)" onclick="actitab(3)" href="#3">Imatges</a>
+						<a class="section-link" onmouseover="photoswap(4)" onclick="actitab(4)" href="#4">So</a>
+						<a class="section-link" onmouseover="photoswap(5)" onclick="actitab(5)" href="#5">Extres</a>
 					</div>
 				</div>
 				<div id="pictures">
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</nav>
-		<header id="section-0">
+		<header id="0">
 			<div id="inici">
 				<div class="central">
 					<h1><p>Meritxell Castellet Sánchez</p></h1>
@@ -48,23 +48,37 @@
 			</div>
 		</header>
 		<main>
-			<div id="section-head"><p>Txell Castellet</p></div>
-			<section id="section-1">
-				<p>Part 1</p>
+			<div id="section-head"><a href="">Txell Castellet</a></div>
+			<section id="1">
+				<p>Recordo quan era petita que vaig agafar un llibreta i vaig començar a escriure amb mala lletra però amb bona intenció, tot allò que en aquell moment m’apassionava, els meus somnis, les meves aspiracions… i entre mig de moltes paraules vaig escriure “M’agradaria fer una pel·lícula”, inclús al costat especificava que no m’importava si era llarga o curta, si parlava d’una cosa o d’una altra, sinó que el meu objectiu era crear. I potser és una font poc fiable, però no fa molts anys endarrera, quan vaig començar a plantejar-me la famosa pregunta de “I què vull ser quan sigui gran?”, al llegir-me això, algú dins meu em va recordar que naixem d’una manera, i que també en creixem d’una altre totalment diferent.</p>
+				<p>Mirant un documental sobre en Christoph Niemann, dissenyador gràfic, em vaig quedar amb una idea que sense pensar-hi la vaig relacionar amb el cinema. Ell parlava sobre la música pop, la qual mai ha inventat cap cançó nova, és més, sempre explica la mateixa historia però amb paraules i ritmes diferents. L’ésser humà porta des dels seus inicis cantant sobre això, però la idea de fer-ho d’una manera diferent, la idea de fer cinema d’una forma innovadora i interessant, és el que pot fer parar a l’espectador i pensar. Pensar que mai abans ningú havia encertat tant alhora d’explicar allò que a un li acaben d’ensenyar.</p>
+				<p>Ell ho relaciona amb el disseny gràfic, jo ho relaciono amb el cinema, i es que pot ser aplicable a qualsevol forma de creació. Tot tipus d’art que presenciem cada dia, ja ha estat creat, el que fa que ho veiem diferent és la creativitat. L’inoblidable film d’ “ET” és perfectament relacionable amb la idea de Déu i com aquest se’ns presentà als humans i immediatament el vam considerar un ésser infinitament pur. Steven Spielberg, però, potser fins i tot sense adonar-se’n, va saber reorganitzar els personatges, com la seva aparença o situació. I semblant la cosa més senzilla del món, va fer una de les pel·lícules que ha canviat la història del cinema.</p>
+				<p>Precisament, doncs, aquesta és la meva aspiració. Saber assolir un tipus de coneixement que em permeti arribar a crear un cosa que sembli que mai no hagi estat creada per ningú. Aquí hi influeix la tècnica i l’experiència, són la base de la comunicació, i això són anys d’estudi i preparació, inclús també per pensar i escollir quin és el paper que vull tenir dins d’aquesta creació. Dins del que cab, és molt fàcil tenir una idea de guió i pensar de realitzar-la, però a partir d’aquí hi ha un procés de desenvolupament més gran i complex del que de vegades un es pot arribar a imaginar.</p>
 			</section>
-			<section id="section-2">
-				<p>Part 2</p>
+			<section id="2">
+				
 			</section>
-			<section id="section-3">
-				<p>Part 3</p>
+			<section id="3">
+				<img src="img/fotos/1.jpg" alt="Color cel" width="70%">
 			</section>
-			<section id="section-4">
+			<section id="4">
 				<p>Part 4</p>
 			</section>
-			<section id="section-5">
+			<section id="5">
 				<p>Part 5</p>
 			</section>
 		</main>
+		<script type="text/javascript">
+			function tabrem() {
+				var hash = location.hash;
+				var tab = hash.charAt(1);
+				var tab = parseInt(tab);
+				if(tab >= 1){
+					document.getElementById('0').style.display="none";
+					document.getElementById(tab).style.display="block";
+				}
+			}
+		</script>
 		<script type="text/javascript">
 			function menuopening(x) {
 					x.classList.toggle("change");
@@ -81,17 +95,17 @@
 		</script>
 		<script type="text/javascript">
 				function actitab(x) {
-					document.getElementById('section-0').style.display="none";
-					document.getElementById('section-1').style.display="none";
-					document.getElementById('section-2').style.display="none";
-					document.getElementById('section-3').style.display="none";
-					document.getElementById('section-4').style.display="none";
-					document.getElementById('section-5').style.display="none";
+					document.getElementById('0').style.display="none";
+					document.getElementById('1').style.display="none";
+					document.getElementById('2').style.display="none";
+					document.getElementById('3').style.display="none";
+					document.getElementById('4').style.display="none";
+					document.getElementById('5').style.display="none";
 
 					document.getElementById('menu').classList.toggle("change");
 					document.getElementById('overlay').classList.toggle('visible');
 
-					document.getElementById('section-' + x).style.display="block";
+					document.getElementById(x).style.display="block";
 				}
 		</script>
 	</body>
